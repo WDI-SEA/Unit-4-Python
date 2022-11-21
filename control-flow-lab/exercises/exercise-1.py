@@ -3,6 +3,15 @@
 # Write the code that:
 # 1. Prompts the user to enter a letter in the alphabet:
 #      Please enter a letter from the alphabet (a-z or A-Z): 
+
+letter = input('Please enter a letter from the alphabet (a-z or A-Z): ').lower()
+if letter in ["a","e","i","o","u"]:
+    print(f'The letter {letter} is a vowel')
+else:
+    print(f'The letter {letter} is a consonant')
+
+
+
 # 2. Write the code that determines whether the letter entered is a vowel
 # 3. Print one of following messages (substituting the letter for x):
 #      - The letter x is a vowel

@@ -7,3 +7,10 @@
 #      - What you entered is xx characters long
 # 3. Return to step 1, unless the word 'quit' was entered.
 
+
+
+word = " "
+
+while word != 'quit':
+    word = input('Please enter a word or phrase:')
+    print(f'What you entered is {len(word)} characters long')

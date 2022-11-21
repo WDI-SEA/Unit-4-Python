@@ -12,3 +12,10 @@
 #      etc.
 
 # Hint: The next number is found by adding the two numbers before it
+
+a,b,i = 0,1,0
+while(i<51):
+    print(f'term: {i} / number: {a}')
+    a = b - a
+    b = a + b
+    i += 1
