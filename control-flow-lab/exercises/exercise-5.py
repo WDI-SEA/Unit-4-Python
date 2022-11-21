@@ -12,3 +12,17 @@
 #      etc.
 
 # Hint: The next number is found by adding the two numbers before it
+
+# Function for nth Fibonacci number
+
+
+number1 = 0
+number2 = 1
+term = 0
+
+while term <= 50:
+    print(f"terms: {term} / number: {number1}")
+    number1 = number2 - number1
+    number2 = number1 + number2
+    term += 1
+
