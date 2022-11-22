@@ -10,3 +10,12 @@
 
 # Hints:  Use the in operator to check if a character is in another string
 #         For example, if some_char in 'abc':
+
+
+letter = input('enter a letter').tol
+vowels = ['a','o','i','e','u']
+
+if letter in vowels:
+    print('vowel')
+else:
+    print('constant')
