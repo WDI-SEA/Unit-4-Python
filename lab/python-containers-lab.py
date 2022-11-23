@@ -62,25 +62,19 @@ home_town ={
 
 cohort = []
 
+for n in range(0,4):
+   cohort_list = {
+        'student': students[n],
+        'fav_food': foods[n]
+    }
 
-students = [
-    {
-        'student': 'shaikha',
-        'fav_food': 'pizza',
-    },
-    {
-        'student': 'sharifa',
-        'fav_food': 'steak',
-    },
-    {
-        'student': 'sumyh',
-        'fav_food': 'Cheeseburger',
-    },
-]
 
- for student in students:
-    cohort.append(student)
- print(cohort)
+   cohort.append(cohort_list)
+ 
+
+for cohort_list in cohort:
+  print(cohort_list)
+
 
 
 # -----------------------------------------------------------------------------------------------------------
