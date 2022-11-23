@@ -62,18 +62,19 @@ home_town ={
 
 cohort = []
 
+
 students = [
     {
-        'student': 'mariam',
+        'student': 'shaikha',
         'fav_food': 'pizza',
     },
     {
-        'student': 'carlos',
+        'student': 'sharifa',
         'fav_food': 'steak',
     },
     {
-        'student': 'ramesh',
-        'fav_food': 'mansaf',
+        'student': 'sumyh',
+        'fav_food': 'Cheeseburger',
     },
 ]
 
