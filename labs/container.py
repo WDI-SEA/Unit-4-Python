@@ -23,7 +23,7 @@ for food in foods:
 # Using a for loop, print just the last two food strings from foods.
 
 # foods = ('pizza', 'pasta', 'sushi')
-for food in foods[1:3]:
+for food in foods[-2:]: # gives the last two
     print(f"{food} is a good food")
 
 ###########################
@@ -94,6 +94,11 @@ for idx, name in enumerate(students):
 
 for student in awesome_students:
     print(f"{student['name']} is awesome!")
+
+# another way
+# awesome_students = [f"{s['name']} is awesome" for s in cohort]
+# for a in awesome_students:
+#     print(a)
 
 ###########################
 
