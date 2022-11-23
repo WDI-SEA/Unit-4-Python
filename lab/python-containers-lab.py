@@ -60,18 +60,26 @@ home_town ={
 # }
 # Iterate over cohort printing out each element.
 
-cohort =[]
+cohort = []
 
- for n in range(0,4):
-     cohort_list = {
-         'student': students[n],
-         'fav_food': foods[n]
-     }
+students = [
+    {
+        'student': 'mariam',
+        'fav_food': 'pizza',
+    },
+    {
+        'student': 'carlos',
+        'fav_food': 'steak',
+    },
+    {
+        'student': 'ramesh',
+        'fav_food': 'mansaf',
+    },
+]
 
-     cohort.append(cohort_list)
-
- for cohort_list in cohort:
-  print(cohort_list)
+ for student in students:
+    cohort.append(student)
+ print(cohort)
 
 
 # -----------------------------------------------------------------------------------------------------------
