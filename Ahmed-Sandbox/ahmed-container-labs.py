@@ -13,11 +13,15 @@ for food in foods:
 
 # Exercise 3
 print('\nExercise 3')
-for idx, food in enumerate(foods):
-    if idx == len(foods)-1 or idx == len(foods)-2:
-        print(f"{food}")
+# for idx, food in enumerate(foods):
+#     if idx >= len(foods)-2:
+#         print(f"{food}")
 
- 
+# Better Approach
+for food in foods[-2:]:
+    print(f"{food}")
+
+
 # Exercise 4
 print('\nExercise 4')
 home_town = {
