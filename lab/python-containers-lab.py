@@ -21,9 +21,9 @@ foods = ["Pizza", "Cheeseburger", "Salad", "Chicken"]
 # Exercise 3
 # Using a for loop, print just the last two food strings from foods.
 
- for i in range(len(foods)):
-      if i == len (foods)-2 or i == len(foods)-1:
-        print(foods[i], 'is a good food.')
+for food in foods[2:]:
+   print(f"{food} is a good food.") 
+   
 
 # ---------------------------------------------------------------------------------------------------------------------
 # Exercise 4
