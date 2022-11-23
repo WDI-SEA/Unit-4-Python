@@ -19,3 +19,31 @@
 #
 # After setting the likely season, you can use another if...elif...else statement to "adjust" if
 # the day number falls within a certain range.
+month = input('\nenter a month\n').lower()
+day = input('\nenter a day\n')
+if month=='dec':
+    if day>=21:
+        print('winter')
+    else:
+        print('fall')
+elif month =='mar':
+    if day<=19:
+        print('winter')
+    else:
+        print('spring')
+elif month=='jan' or month=='feb':
+    print('winter')
+elif month=='apr' or month=='may':
+    print('spring')
+elif month=='jul' or month=='aug':
+    print('summer')
+elif month=='sep':
+    if day>=22:
+        print('fall')
+    else:
+        print('summer')
+elif month=='jun':
+   if day<=20:
+        print('spring')
+   else:
+        print('summer')

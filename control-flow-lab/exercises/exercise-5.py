@@ -12,3 +12,13 @@
 #      etc.
 
 # Hint: The next number is found by adding the two numbers before it
+n=0
+number = 0
+while(number<50):
+    number=n+number
+    print("number", number)
+    print("n", n)
+    n+=1
+
+
+    
