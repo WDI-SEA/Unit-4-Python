@@ -12,3 +12,15 @@
 #      etc.
 
 # Hint: The next number is found by adding the two numbers before it
+
+# first two terms
+num1, num2 = 0, 1
+term = 0
+
+while term < 50:
+    print(f'term: {term} / number: {num1}')
+    nth = num1 + num2
+    # update values
+    num1 = num2
+    num2 = nth
+    term += 1
