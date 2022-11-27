@@ -1,4 +1,4 @@
-<img src="https://i.imgur.com/DPzk4Ok.png">
+<!-- <img src="https://i.imgur.com/DPzk4Ok.png">
 
 # Control Flow in Python - Lab
 
@@ -22,7 +22,7 @@ Possible solutions are [here](https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_cha
 
 ## Deliverable
 
-This lab is a deliverable:
+This lab is a deliverable: -->
 
 
 
