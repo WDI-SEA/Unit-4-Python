@@ -18,7 +18,8 @@ cats_list = [
 
 # Create your views here.
 def home(request):
-  return HttpResponse('<h1>My First Django Route!</h1>')
+  return render(request, 'home.html')
+  # return HttpResponse('<h1>My First Django Route!</h1>')
 
 
 def about(request):
