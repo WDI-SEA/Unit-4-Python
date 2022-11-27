@@ -21,9 +21,9 @@ foods = ["Pizza", "Cheeseburger", "Salad", "Chicken"]
 # Exercise 3
 # Using a for loop, print just the last two food strings from foods.
 
-# for i in range(len(foods)):
-#      if i == len (foods)-2 or i == len(foods)-1:
-#       print(foods[i], 'is a good food.')
+# for food in foods[2:]:
+#    print(f"{food} is a good food.") 
+   
 
 # ---------------------------------------------------------------------------------------------------------------------
 # Exercise 4
@@ -60,19 +60,24 @@ home_town ={
 # }
 # Iterate over cohort printing out each element.
 
-cohort =[]
 
-# for n in range(0,4):
-#     cohort_list = {
-#         'student': students[n],
-#         'fav_food': foods[n]
-#     }
+cohort = []
 
-#     cohort.append(cohort_list)
+for n in range(0,4):
+   cohort_list = {
+        'student': students[n],
+        'fav_food': foods[n]
+    }
 
-# for cohort_list in cohort:
-#  print(cohort_list)
 
+   cohort.append(cohort_list)
+ 
+
+for cohort_list in cohort:
+  print(cohort_list)
+
+# for awesome_list in awesome_students:
+#  print(f"{awesome_list['student']} is awesome!" )
 
 # -----------------------------------------------------------------------------------------------------------
 # Exercise 7
@@ -97,5 +102,5 @@ cohort =[]
 # Exercise 8
 # Using the tuple foods and list comprehension within a for loop, print each food string that contains the letter a.
 
-food_list = [food for food in foods if 'a' in food]
-print(food_list)
+# food_list = [food for food in foods if 'a' in food]
+# print(food_list)
