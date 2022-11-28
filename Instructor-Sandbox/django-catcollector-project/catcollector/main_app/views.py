@@ -2,6 +2,21 @@ from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
 from .models import Cat
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+
+class CatUpdate(UpdateView):
+    model = Cat
+    fields = ['breed', 'description', 'age']
+    success_url = '/cats/'
+
+class CatDelete(DeleteView):
+    model = Cat
+    success_url = '/cats/'
+
+class CatCreate(CreateView):
+    model = Cat
+    fields = '__all__'
+    success_url='/cats/'
 
 
 def cats_detail(request, cat_id):
