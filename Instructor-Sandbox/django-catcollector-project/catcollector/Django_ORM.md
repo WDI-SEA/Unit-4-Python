@@ -20,3 +20,23 @@
 
 6. Retrieve Cats and order:
     - Cat.objects.order_by('-age')
+
+7. Retrieve all Feedings of a Cat (1:M, ForeignKey)
+    - c = Cat.objects.get(id=1)
+    - c.feeding_set.all()
+
+7. Create a new Feeding for a Cat (1:M, ForeignKey)
+    - c = Cat.objects.get(id=1)
+    - c.feeding_set.create(.. ..)
+
+8. Another way to create a new Feeding for a Cat (1:M, ForeignKey)
+    - c = Cat.objects.get(id=1)
+    - newFeeding = Feeding(...., cat=c)
+    - newFeeding.save()
+
+9. Another way to create a new Feeding for a Cat (1:M, ForeignKey)
+    - c = Cat.objects.get(id=1)
+    - Feeding.objects.create(....., cat=c)
+
+
+
