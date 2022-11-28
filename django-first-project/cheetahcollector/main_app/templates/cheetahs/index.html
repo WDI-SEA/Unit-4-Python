@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Cheetah's List</h1>
+
+{% for cheetah in cheetahs %}
+  <div class="card">
+    <a href="/cheetahs/{{ cheetah.id }}">
+    <div class="card-content">
+      <span class="card-title">{{ cheetah.name }}</span>
+      <img src="{{ cheetah.image}}"/>
+      <p>Breed: {{ cheetah.breed }}</p>
+      <p>Description: {{ cheetah.description }}</p>
+      <p>Gender: {{ cheetah.gender }}</p>
+      <p>Age: {{ cheetah.age }}</p>
+      
+    </div>
+    </a>
+  </div>
+{% endfor %}
+
+{% endblock %}
