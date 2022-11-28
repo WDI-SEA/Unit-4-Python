@@ -1,27 +1,35 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
+from .models import Cat
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
-class Cat:
-    def __init__(self, name, breed, description, age):
-        self.name = name
-        self.breed = breed
-        self.description = description
-        self.age = age
+class CatUpdate(UpdateView):
+    model = Cat
+    fields = ['breed', 'description', 'age']
+    success_url = '/cats/'
 
-cats_list = [
-  Cat('Lolo', 'tabby', 'foul little demon', 3),
-  Cat('Sachi', 'tortoise shell', 'diluted tortoise shell', 0),
-  Cat('Raven', 'black tripod', '3 legged cat', 4)
-]
+class CatDelete(DeleteView):
+    model = Cat
+    success_url = '/cats/'
+
+class CatCreate(CreateView):
+    model = Cat
+    fields = '__all__'
+    success_url='/cats/'
+
+
+def cats_detail(request, cat_id):
+    cat = Cat.objects.get(id=cat_id)
+    return render(request, 'cats/detail.html', {'cat': cat})
+
+
 
 def cats_index(request):
+    cats_list = Cat.objects.all()
     return render(request, 'cats/index.html', {
         'cats': cats_list
     })
-
-
-
 
 
 def about(request):
@@ -30,4 +38,8 @@ def about(request):
 
 # function home(req,res)
 def home(request):
-    return HttpResponse('<h1>My First Django Route!</h1>')
+    return render(request, 'home.html')
+
+
+# def home(request):
+#     return HttpResponse('<h1>My First Django Route!</h1>')
