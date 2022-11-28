@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Cat
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 # Create your views here.
 
 def home(request):
@@ -26,3 +27,27 @@ def cats_details(request, cat_id):
         'cat': cat
     }
     return render(request, 'cats/details.html', context)
+
+
+# Class Based Views
+class CatCreate(CreateView):
+    # Specify the views
+    model = Cat
+
+    # choose all the fields
+    fields  = '__all__'
+
+    # to specify the fields
+    # fields = ['name', 'breed']
+
+    success_url = '/cats/'
+
+    
+class CatUpdate(UpdateView):
+    model = Cat
+    fields = ['breed', 'description', 'age']
+    success_url = '/cats/'
+
+class CatDelete(DeleteView):
+    model = Cat
+    success_url = '/cats/'

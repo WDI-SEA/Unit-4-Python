@@ -1,22 +1,26 @@
 {% extends 'base.html' %}
 
 {% block content%}
-<h1>Single Bird</h1>
+<h1>Single Cat</h1>
 
     <div class="card">
         <div class="card-content">
-            <span class="card-title">{{ bird.name }}</span>
+            <span class="card-title">{{ cat.name }}</span>
 
-            <p>Breed: {{ bird.breed }}</p>
-            <p>Description: {{ bird.description }}</p>
+            <p>Breed: {{ cat.breed }}</p>
+            <p>Description: {{ cat.description }}</p>
 
-            {% if bird.age > 0 %}
-                <p>{{ bird.age }}</p>
+            {% if cat.age > 0 %}
+                <p>{{ cat.age }}</p>
             {% else %}
                 <p>Birdy</p>
             {% endif %}
         </div>
-    
+
+        <div class="card-action">
+            <a href="{% url 'cats_update' cat.id %}">Edit</a>
+            <a href="{% url 'cats_delete' cat.id %}">Delete</a>
+        </div>
     </div>
 
 {% endblock %}
