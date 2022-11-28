@@ -4,8 +4,8 @@
 # Print out the last student's name.
 
 students =['shaikha', 'sharifa', 'sumyh', 'hessa']
-# print(students[1])
-# print(students[-1])
+print(students[1])
+ print(students[-1])
 
 # ----------------------------------------------------------------------------------------------------------------------
 
@@ -14,8 +14,8 @@ students =['shaikha', 'sharifa', 'sumyh', 'hessa']
 # Use a for loop to print out the string "food goes here is a good food".
 
 foods = ["Pizza", "Cheeseburger", "Salad", "Chicken"]
-# for food in foods:
-#     print(f"{food} is a good food.") 
+ for food in foods:
+    print(f"{food} is a good food.") 
 
 # ---------------------------------------------------------------------------------------------------------------------
 # Exercise 3
@@ -23,6 +23,8 @@ foods = ["Pizza", "Cheeseburger", "Salad", "Chicken"]
 
 # for food in foods[2:]:
 #    print(f"{food} is a good food.") 
+for food in foods[2:]:
+   print(f"{food} is a good food.") 
    
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -37,7 +39,7 @@ home_town ={
     'population':58000,
 }
 
-# print(f"I was born in {home_town['city']}, {home_town['state']} - population of {home_town['population']} ")
+ print(f"I was born in {home_town['city']}, {home_town['state']} - population of {home_town['population']} ")
 
 # -----------------------------------------------------------------------------------------------------------
 # Exercise 5
@@ -46,8 +48,8 @@ home_town ={
 # "state = California"
 # "population = 58000"
 
-# for key, val in home_town.items():
-#   print( f"{key} = {val}" )
+ for key, val in home_town.items():
+   print( f"{key} = {val}" )
 
 
 # -----------------------------------------------------------------------------------------------------------
@@ -69,6 +71,21 @@ for n in range(0,4):
         'fav_food': foods[n]
     }
 
+cohort = []
+
+for n in range(0,4):
+   cohort_list = {
+        'student': students[n],
+        'fav_food': foods[n]
+    }
+
+
+   cohort.append(cohort_list)
+ 
+
+for cohort_list in cohort:
+  print(cohort_list)
+
 
    cohort.append(cohort_list)
  
@@ -85,17 +102,17 @@ for cohort_list in cohort:
 # ["Tina is awesome!", "Fred is awesome!", "Wilma is awesome!"]
 # Iterate over awesome_students printing out each string.
 
-# awesome_students=[]
+ awesome_students=[]
 
-# for n in range(0,4):
-#    awesome_list = {
-#         'student': students[n],
-#     }
+ for n in range(0,4):
+    awesome_list = {
+        'student': students[n],
+     }
 
-#    awesome_students.append(awesome_list)
+    awesome_students.append(awesome_list)
 
-# for awesome_list in awesome_students:
-#  print(f"{awesome_list['student']} is awesome!" )
+ for awesome_list in awesome_students:
+   print(f"{awesome_list['student']} is awesome!" )
 
 
 # -----------------------------------------------------------------------------------------------------------
@@ -104,3 +121,5 @@ for cohort_list in cohort:
 
 # food_list = [food for food in foods if 'a' in food]
 # print(food_list)
+food_list = [food for food in foods if 'a' in food]
+print(food_list)
