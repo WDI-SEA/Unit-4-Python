@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="mt-5 container text-center">
+      <h1 class=" display-4">About Finch Collector</h1>
+      <p class="lead">This is a django project revolving aroud different 
+        types of finch birds
+      </p>
+      <img src="{% static 'images\bird.jpg' %}">
+
+    </div>
+  </div>
+{% endblock%}

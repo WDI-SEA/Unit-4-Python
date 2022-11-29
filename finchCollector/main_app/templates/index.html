@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Finch List</h1>
+<div class="d-flex  flex-row justify-content-center" style="height:350px;width:50%;border:1px solid black">
+{% for finch in finches %}
+<div style="height:100px;">
+    <img width="300" src="https://images.pexels.com/photos/625419/pexels-photo-625419.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{finch.name}}</h5>
+      <p class="card-text">Color:{{finch.description}}</p>
+      <p class="card-text">Age:{{finch.age}}</p>
+    </div>
+    <div class="card-action">
+      <button class="btn btn-primary"><a class="text-decoration-none text-white" href="{% url 'cats_update' finch.id %}">Edit</a></button>
+      <button class="btn btn-primary"><a class="text-decoration-none text-white" href="{% url 'cats_delete' finch.id %}">Delete</a></button>
+  </div>
+</div>
+<table class="table border border-black">
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Meal</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    
+  {% for Feeding in finch.feeding_set.all %}
+  <tr>
+        <td>{{Feeding.date}}</td>
+        <td>{{Feeding.meal}}</td>
+      
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+<div>
+    <!-- new code below -->
+    <form action="{% url 'add_feeding' finch.id %}" method="post">
+      {% csrf_token %}
+      {{ feeding_form.as_p }}
+      <input type="submit" class="btn" value="Add Feeding">
+    </form>
+</div>
+{% endfor %}
+
+</div>
+{% endblock %}

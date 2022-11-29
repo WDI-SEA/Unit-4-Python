@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Finch Collector</title>
+</head>
+<body>
+    <!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand fw-bold" href="/home">
+     Fincher Collector
+    </a>
+  
+            <a class="nav-link" href="/index">Index</a>
+            <a class="nav-link" href="/about">About</a>
+            <a class="nav-link" href="{% url 'cats_create' %}">Create</a>
+            
+  </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
